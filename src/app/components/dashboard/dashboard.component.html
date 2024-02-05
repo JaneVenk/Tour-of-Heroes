@@ -1,0 +1,12 @@
+<section class="dashboard">
+  <p class="dashboard__title">Top Heroes</p>
+  <div class="dashboard__buttons-wrapper">
+    <button
+      class="dashboard__button"
+      *ngFor="let topHero of topHeroesList"
+      (click)="navigateToHeroeDetails(topHero.id)"
+    >
+      {{ topHero.name | titlecase }}
+    </button>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+<section class="details">
+  <p class="details__title">
+    <span class="details__title__span">{{
+      currentHero?.name | uppercase
+    }}</span>
+    Details
+  </p>
+
+  <p class="details__id">id: {{ currentHero?.id }}</p>
+
+  <form class="details__form" [formGroup]="applyForm">
+    <label class="details__form__label">Hero name: </label>
+    <input
+    class="details__form__input"
+      (input)="updateHeroName()"
+      id="hero-name"
+      type="text"
+      formControlName="heroName"
+    />
+    <div
+      class="details__form__error"
+      *ngIf="
+        heroNameControl.hasError('minlength') ||
+        heroNameControl.hasError('required')
+      "
+    >
+      <span>Hero name must be at least 3 characters.</span>
+    </div>
+  </form>
+
+  <button class="details__button" (click)="goBack()">Back</button>
+</section>

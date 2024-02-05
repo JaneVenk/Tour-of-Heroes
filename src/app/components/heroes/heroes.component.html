@@ -1,0 +1,11 @@
+<section class="heroes">
+  <p class="heroes__title">My Heroes</p>
+  <div
+    class="hero"
+    *ngFor="let hero of heroesList"
+    (click)="navigateToHeroeDetails(hero.id)"
+  >
+    <div class="hero__id">{{ hero.id }}</div>
+    <div class="hero__name">{{ hero.name | titlecase }}</div>
+  </div>
+</section>

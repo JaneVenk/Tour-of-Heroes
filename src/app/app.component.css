@@ -1,0 +1,30 @@
+.home-page-wrapper {
+  background-color: aqua;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.header__title {
+  color: rgb(56, 56, 190);
+  font-size: 30px;
+  margin: 0 0 10px 0;
+}
+
+.header__button {
+  height: 50px;
+  border-radius: 5px;
+  background-color: #e4e4e4;
+  border: none;
+  margin: 0 10px 0 5px;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header__button:hover {
+  background-color: #303c5d;
+  color: white;
+}
